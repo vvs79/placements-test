@@ -1,0 +1,173 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  overflow-x: hidden;
+  background: url(asset-path('intro-bg.jpg'));
+}
+
+#map {
+  height:400px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+}
+
+#user_remember_me {
+  left: 115px;
+}
+
+.topnav {
+  font-size: 14px;
+  background-color: #426C94;
+  border-bottom: none;
+  height: auto;
+}
+
+.navbar-default {
+  .navbar-brand, .navbar-nav > li > a{
+  color: white;
+    &:hover{
+      color: white;
+    }
+  }
+}
+
+.intro-header {
+  padding-top: 50px; 
+  padding-bottom: 50px;
+  text-align: center;
+  color: #f8f8f8;
+  border-bottom: none;
+  height: 80vh;
+}
+
+.intro-message {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  margin-top: 20vh;
+  }
+
+.intro-message > h1 {
+  margin: 0;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  font-size: 5em;
+}
+
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+@media(max-width:767px) {
+  .intro-message {
+    padding-bottom: 15%;
+  }
+
+  .intro-message > h1 {
+    font-size: 3em;
+  }
+
+  .intro-divider {
+    width: 100%;
+  }
+  .summary-fixed {
+    display: none;
+  }
+
+  .summary-info {
+    div:first-of-type {
+      h3, h2{
+      text-align: center;
+      }
+    }
+  }
+
+  .search-field {
+    margin-top: 20px;
+  }
+
+}
+
+@media(max-width:600px) {
+  #summary-drop-list {
+    display: none;
+  }
+
+  .summary-card {
+    /*width: 100% !important;*/
+  }
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.center {
+  text-align: center;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+.content-area {
+  background: #D4E668;
+  min-height: 75vh;
+  h1 {
+    text-align: center;
+  }
+}
+
+.red {
+  color: red;
+}
+
+.margin-50 {
+  margin: 40px 0px 30px 0px;  
+}
+
+.margin-20 {
+  margin: 10px 0px 30px 0px;  
+}
+
+.padding-10 {
+  border:1px black solid;
+  padding:10px;
+}

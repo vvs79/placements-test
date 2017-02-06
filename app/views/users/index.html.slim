@@ -1,0 +1,29 @@
+- provide(:title, 'All Users')
+.container.content-area
+  h1
+    | All Users
+  br
+  .row  
+    = render 'layouts/messages'
+  br
+  .col-sm-12
+    .center
+      = will_paginate
+  - if @users.count <= 20
+    br     
+  .table-responsive#interview-table
+    table.table.table-bordered.table-hover
+      tr.active
+        th.width_3.center
+          h4 Id
+        th.width_15.center
+          h4 Name
+        th.width_15.center
+          h4 Login
+        th.width_30.center
+          h4 Email
+        th.width_22.center
+          h4 Date
+        th.width_15.center
+          h4 Action
+      = render 'user'

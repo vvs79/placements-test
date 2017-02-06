@@ -1,0 +1,14 @@
+- @places.each do |place|
+  .col-md-4.col-xs-1.margin-20
+    = link_to place_path(place)
+      .center
+        = image_tag place.images[place.images.count-1].url, width: '150', height: '100'
+    = link_to place_path(place)
+      p.text-center
+        | #{place.title.truncate(20)}
+    .text-center
+      p
+        = link_to 'Show', place_path(place), rel: 'tooltip', title: 'Show place', class: 'btn btn-primary'
+      - if (user_signed_in? && current_user.admin?)
+        p
+          = link_to 'Del', place_path(place), method: :delete, data: { confirm: "You sure?" }, rel: 'tooltip', title: 'Delete place', class: 'btn btn-danger'

@@ -1,0 +1,15 @@
+- provide(:title, 'All places')
+.container.content-area
+  br
+  .row
+    = render 'layouts/messages'
+  .row.margin-50
+    .col-sm-3
+      = link_to 'Add place', new_place_path, class: 'btn btn-success'
+  br
+  = render 'places'
+  - if @places.count > 6
+    br
+    .col-sm-12
+      .center
+        = will_paginate

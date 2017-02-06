@@ -1,0 +1,15 @@
+.form-group.col-md-8.col-md-offset-2
+  = form_for @place, html: { multipart: true } do |f|
+    = render 'shared/error_messages', object: f.object
+    = f.label :title, "Title"
+    = f.text_field :title, placeholder: "Title", class: 'form-control'
+    = f.label :description, "Description"
+    = f.text_area :description, placeholder: "Description", rows: 5, class: 'form-control'
+    = f.label :price, "Price"
+    = f.number_field :price, placeholder: "Price", min: 1, max: 999999, step: 1, class: 'form-control'
+    = f.label :address, "Address"
+    = f.text_field :address, placeholder: "Address", class: 'form-control'
+    p
+      = f.label :images, 'Photo'
+      = f.file_field :images, multiple: true
+    = f.submit yield(:button_text), class: "btn btn-md btn-success col-md-4 col-md-offset-4"

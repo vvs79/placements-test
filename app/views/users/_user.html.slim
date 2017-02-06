@@ -1,0 +1,19 @@
+- @users.each do |user|
+  tr.info
+    td.center
+      //= link_to user_path(user), rel: 'tooltip', title: 'Show user'
+      = user.id
+    td.center
+      //= link_to user_path(user), rel: 'tooltip', title: 'Show user'
+      = user.name
+    td
+     //= link_to user_path(user), rel: 'tooltip', title: 'Show user'
+      = user.login
+    td
+      //= link_to user_path(user), rel: 'tooltip', title: 'Show user'
+      | #{user.email}
+    td
+      = user.created_at.localtime.strftime("%m/%d/%Y at %r")
+    td  
+      //= link_to '#', rel: 'tooltip', title: 'Show user', class: "btn btn-sm btn-primary" do
+        user.glyphicon.glyphicon-eye-open
